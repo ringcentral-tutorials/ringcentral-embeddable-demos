@@ -6,7 +6,7 @@ global class RCPhoneHelper {
         }
         return null;
     }
-      webService static void logACall(string contactId, Integer duration, String fromNumber, String toNumber) {
+    webService static void logACall(string contactId, Integer duration, String fromNumber, String toNumber) {
         Task t = new Task(
             ActivityDate = date.today(),
             CallDurationInSeconds = duration,
