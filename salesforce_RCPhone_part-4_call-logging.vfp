@@ -1,0 +1,31 @@
+else if (event.data.type === 'rc-call-end-notify') {
+    if (event.data.call.startTime !== null) {
+        var fromNumber = event.data.call.from;
+        if (fromNumber[0] === '+') {
+            fromNumber = fromNumber.substring(1);
+        }
+        sforce.opencti.runApex({
+            apexClass: 'RCPhoneHelper',
+            methodName: 'searchContact',
+            methodParams: 'phone=' + fromNumber,
+            callback: function(response) {
+                if (response.success == true) {
+                    var contactId = response.returnValue.runApex.Id;
+                    if (contactId !== null) {
+                        sforce.opencti.runApex({
+                            apexClass: 'RCPhoneHelper',
+                            methodName: 'logACall',
+                            methodParams: 'contactId=' + contactId +
+                                '&duration=' + Math.round((event.data.call.endTime - event.data.call.startTime) / 1000) +
+                                '&fromNumber=' + event.data.call.from +
+                                '&toNumber=' + event.data.call.to,
+                            callback: function(rr) {
+                                console.log(rr);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+}

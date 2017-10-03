@@ -1,0 +1,11 @@
+global class RCPhoneHelper {
+
+    // Inbound Screen Pop
+    webService static Contact searchContact(String phone) {
+        List < List < SObject >> l = [FIND: phone IN PHONE FIELDS RETURNING Contact(Id limit 1)];
+        if (l.size() > 0 && l[0].size() > 0) {
+            return (Contact) l[0][0];
+        }
+        return null;
+    }
+}

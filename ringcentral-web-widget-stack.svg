@@ -1,0 +1,26 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_17" height="58" width="420.999947" y="41.5" x="79" stroke-width="0" fill="#f68723"/>
+  <rect stroke="#000" id="svg_16" height="58" width="420.999947" y="105.5" x="79" stroke-width="0" fill="#1886c8"/>
+  <rect stroke="#000" id="svg_15" height="58" width="251.999941" y="170.5" x="79" stroke-width="0" fill="#1886c8"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="77.5" x="105" stroke-width="0" stroke="#000" fill="#ffffff">Embeddable Web Widget</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_6" y="141.5" x="106" stroke-width="0" stroke="#000" fill="#ffffff">Widgets Library</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_7" y="205.5" x="106" stroke-width="0" stroke="#000" fill="#ffffff">JS Commons SDK</text>
+  <rect stroke="#000" id="svg_8" height="58" width="252.000013" y="235.5" x="79" stroke-width="0" fill="#1886c8"/>
+  <rect stroke="#000" id="svg_9" height="58" width="420.999947" y="301.5" x="79" stroke-width="0" fill="#1886c8"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_11" y="273.5" x="107" stroke-width="0" stroke="#000" fill="#ffffff">JS Client SDK</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_12" y="337.5" x="105" stroke-width="0" stroke="#000" fill="#ffffff">JS SDK</text>
+  <rect stroke="#000" id="svg_13" height="123.000006" width="159.999994" y="170.499994" x="340.000005" stroke-width="0" fill="#1886c8"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_20" y="222.5" x="371" stroke-width="0" stroke="#000" fill="#ffffff">WebRTC</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_21" y="261.5" x="395" stroke-width="0" stroke="#000" fill="#ffffff">SDK</text>
+ </g>
+</svg>

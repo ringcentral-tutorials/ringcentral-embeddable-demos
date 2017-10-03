@@ -1,0 +1,17 @@
+<script src="/support/api/40.0/lightning/opencti_min.js"></script>
+<script>
+   function postMessage(data) {
+       document.getElementsByTagName('iframe')[0].contentWindow.postMessage(data, '*');
+   }  
+   sforce.opencti.enableClickToDial();
+   sforce.opencti.onClickToDial({
+       listener: function(result) {
+           postMessage({
+               type: 'rc-adapter-new-call',
+               phoneNumber: result.number,
+               toCall: true,
+           });
+           sforce.opencti.setSoftphonePanelVisibility({ visible: true });
+       }
+   });
+</script>

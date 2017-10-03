@@ -1,0 +1,15 @@
+// Call Logging
+webService static void logACall(string contactId, Integer duration, String fromNumber, String toNumber) {
+    Task t = new Task(
+        ActivityDate = date.today(),
+        CallDurationInSeconds = duration,
+        CallType = 'Inbound',
+        Description = 'From: ' + fromNumber + '\nTo: ' + toNumber + '\nDuration: ' + duration + ' seconds',
+        Status = 'Completed',
+        Subject = 'Call log',
+        TaskSubtype = 'Call',
+        Type = 'Call',
+        WhoId = contactId
+    );
+    insert t;
+}
