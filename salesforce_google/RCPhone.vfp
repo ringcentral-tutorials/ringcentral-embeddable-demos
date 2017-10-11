@@ -1,0 +1,93 @@
+<apex:page>
+    <style>
+        .hasMotif {
+            margin: 0px;
+        }
+    </style>
+    <apex:iframe src="https://ringcentral.github.io/ringcentral-widget-demo/app.html" height="500" width="300" frameborder="false" />
+
+
+    <script src="/support/api/40.0/lightning/opencti_min.js"></script>
+    <script>
+        // Click-to-Dial
+        function postMessage(data) {
+            document.getElementsByTagName('iframe')[0].contentWindow.postMessage(data, '*');
+        }
+        sforce.opencti.enableClickToDial();
+        sforce.opencti.onClickToDial({
+            listener: function(result) {
+                postMessage({
+                    type: 'rc-adapter-new-call',
+                    phoneNumber: result.number,
+                    toCall: true,
+                });
+                sforce.opencti.setSoftphonePanelVisibility({
+                    visible: true
+                });
+            }
+        });
+
+
+        function receiveMessage(event) {
+            if (event.data.type === 'rc-call-ring-notify') { // Inbound Screen Pop
+                sforce.opencti.setSoftphonePanelVisibility({
+                    visible: true
+                });
+                var fromNumber = event.data.call.from;
+                if (fromNumber[0] === '+') {
+                    fromNumber = fromNumber.substring(1);
+                }
+
+                sforce.opencti.runApex({
+                    apexClass: 'RCPhoneHelper',
+                    methodName: 'searchContact',
+                    methodParams: 'phone=' + fromNumber,
+                    callback: function(response) {
+                        if (response.success == true) {
+                            var contactId = response.returnValue.runApex.Id;
+                            if (contactId !== null) {
+                                sforce.opencti.screenPop({
+                                    type: sforce.opencti.SCREENPOP_TYPE.SOBJECT,
+                                    params: {
+                                        recordId: contactId
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            } else if (event.data.type === 'rc-call-end-notify') { // Call Logging
+                if (event.data.call.startTime !== null) {
+                    var fromNumber = event.data.call.from;
+                    if (fromNumber[0] === '+') {
+                        fromNumber = fromNumber.substring(1);
+                    }
+                    sforce.opencti.runApex({
+                        apexClass: 'RCPhoneHelper',
+                        methodName: 'searchContact',
+                        methodParams: 'phone=' + fromNumber,
+                        callback: function(response) {
+                            if (response.success == true) {
+                                var contactId = response.returnValue.runApex.Id;
+                                if (contactId !== null) {
+                                    sforce.opencti.runApex({
+                                        apexClass: 'RCPhoneHelper',
+                                        methodName: 'logACall',
+                                        methodParams: 'contactId=' + contactId +
+                                            '&duration=' + Math.round((event.data.call.endTime - event.data.call.startTime) / 1000) +
+                                            '&fromNumber=' + event.data.call.from +
+                                            '&toNumber=' + event.data.call.to,
+                                        callback: function(rr) {
+                                            console.log(rr);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+        }
+        window.addEventListener("message", receiveMessage, false);
+    </script>
+</apex:page>

@@ -1,0 +1,28 @@
+global class RCPhoneHelper {
+
+    // Inbound Screen Pop
+    webService static Contact searchContact(String phone) {
+        List<List<SObject>> l = [FIND :phone IN PHONE FIELDS RETURNING Contact(Id limit 1)];
+        if(l.size() > 0 && l[0].size() > 0) {
+            String id = ((Contact)l[0][0]).Id;
+            return [select Id, Name from Contact where Id=:id limit 1];
+        }
+        return null;
+    }
+
+    // Call Logging
+    webService static void logACall(string contactId, Integer duration, String fromNumber, String toNumber) {
+        Task t = new Task(
+            ActivityDate = date.today(),
+            CallDurationInSeconds = duration,
+            CallType = 'Inbound',
+            Description = 'From: ' + fromNumber + '\nTo: ' + toNumber + '\nDuration: ' + duration + ' seconds',
+            Status = 'Completed',
+            Subject = 'Call log',
+            TaskSubtype = 'Call',
+            Type = 'Call',
+            WhoId = contactId
+        );
+        insert t;
+    }
+}
