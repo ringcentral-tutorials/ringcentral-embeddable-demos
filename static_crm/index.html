@@ -128,8 +128,8 @@
                 <tr>
                   <th>User Id</th>
                   <th>Name</th>
-                  <th>Organization</th>
                   <th>Phone Number</th>
+                  <th>Organization</th>
                 </tr>
               </thead>
               <tbody id="contacts-body">
@@ -148,58 +148,35 @@
             <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
               <h1 style="display:none">Contacts</h1>
     
-              <section class="row text-center placeholders" style="display:none">
-                <div class="col-6 col-sm-3 placeholder">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                  <h4>Label</h4>
-                  <div class="text-muted">Something else</div>
-                </div>
-                <div class="col-6 col-sm-3 placeholder">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                  <h4>Label</h4>
-                  <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-6 col-sm-3 placeholder">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                  <h4>Label</h4>
-                  <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-6 col-sm-3 placeholder">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-                  <h4>Label</h4>
-                  <span class="text-muted">Something else</span>
-                </div>
-              </section>
-    
               <h2 id="singlecontactname"></h2>
               <div class="table-responsive">
-                    <table class="table table-striped" id="singlecontacttable">
-                      <thead>
-                        <tr>
-                          <th>User Id</th>
-                          <th>Name</th>
-                          <th>Organization</th>
-                          <th>Phone Number</th>
-                        </tr>
-                      </thead>
-                      <tbody id="contacts-body">
-                      </tbody>
-                    </table>
+                <table class="table table-striped" id="singlecontacttable">
+                  <thead>
+                    <tr>
+                      <th>User Id</th>
+                      <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Organization</th>
+                    </tr>
+                  </thead>
+                  <tbody id="contacts-body">
+                  </tbody>
+                </table>
               </div>
 
               <h3>Cases</h3>
               <div class="table-responsive">
-                    <table class="table table-striped" id="casestable">
-                      <thead>
-                        <tr>
-                          <th>Subject</th>
-                          <th>Priority</th>
-                          <th>Date/Time</th>
-                        </tr>
-                      </thead>
-                      <tbody id="cases-body">
-                      </tbody>
-                    </table>
+                <table class="table table-striped" id="casestable">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Priority</th>
+                      <th>Date/Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cases-body">
+                  </tbody>
+                </table>
               </div>
             </main>
           </div>
@@ -221,8 +198,8 @@
                     )
                     .append(jQuery('<td><a href="?id='+char.id+'">'+char.character.displayName+'</a>')
                     )
-                    .append(jQuery('<td>'))
                     .append('<td><a href="tel:'+numberE164+'">'+numberNat+'</a></td>')
+                    .append(jQuery('<td>'))
                 );
         }
         function deleteRow(tableID) {

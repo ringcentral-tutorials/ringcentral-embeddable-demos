@@ -4,5 +4,5 @@
         margin : 0px;
         }
     </style>
-    <apex:iframe src="https://embbnux.github.io/ringcentral-widget-demo/app.html" height="500" width="300" frameborder="false"/>
+    <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false"/>
 </apex:page>
