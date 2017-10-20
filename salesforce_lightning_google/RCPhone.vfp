@@ -53,6 +53,7 @@
                                 params: { recordId: contact.Id }
                             });
                             //window.open('https://www.google.com/search?q=' + contact.Name);
+                            //window.open('https://www.linkedin.com/search/results/index/?keywords=' + contact.Name);
                         }
                     }
                 }
