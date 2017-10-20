@@ -3,7 +3,8 @@ function receiveMessage(event) {
         sforce.opencti.setSoftphonePanelVisibility({
             visible: true
         });
-        var fromNumber = event.data.call.from;
+        var fromNumberE164 = event.data.call.from;
+        var fromNumber = phoneUtils.formatNational(fromNumberE164, "us");
         if (fromNumber[0] === '+') {
             fromNumber = fromNumber.substring(1);
         }

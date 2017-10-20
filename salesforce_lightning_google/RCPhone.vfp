@@ -8,6 +8,7 @@
     
     
     <script src="/support/api/40.0/lightning/opencti_min.js"></script>
+    <script src="https://grokify.github.io/libphonenumber/dist/libphonenumber.js"></script>
     <script>
         // Click-to-Dial
         function postMessage(data) {
@@ -33,7 +34,8 @@
             sforce.opencti.setSoftphonePanelVisibility({
                 visible: true
             });
-            var fromNumber = event.data.call.from;
+            var fromNumberE164 = event.data.call.from;
+            var fromNumber = phoneUtils.formatNational(fromNumberE164, "us");
             if (fromNumber[0] === '+') {
                 fromNumber = fromNumber.substring(1);
             }
