@@ -7,14 +7,12 @@ This is a set of demos to get started using the RingCentral Web Widget:
 
 ## Demos
 
-| Demo | Use Cases | Click-to-Dial | Click-to-Text |
-|------|-----------|---------------|---------------|
-| [Static Simple](static_crm) | Click-to-Dial, Click-to-SMS |
-| [Static CRM](static_crm) | Click-to-Dial, Click-to-SMS |
-| [Static CRM](static_crm) | - [x] |
-| [Salesforce Lightning](salesforce_lightning) | Click-to-Dial, Inbound Screen-Pop , Call Log |
-
-
+| Demo | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log |
+|------|---------------|---------------|------------|----------|
+| [Static Simple](static_crm) | y | y | n | n |
+| [Static CRM](static_crm) | y | y | y | n |
+| [Salesforce Lightning](salesforce_lightning) | y | n | y | y |
+| [Salesforce Plus](salesforce_lightning_more) | y | n | y | y |
 
 ## References
 
