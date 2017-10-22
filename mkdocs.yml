@@ -8,4 +8,4 @@ extra_css: [extra.css]
 extra_javascript: [fonts.js]
 pages:
 - 'Overview': 'index.md'
-- 'Static CRM': 'static_crm.md'
+- 'Static CRM Web Widget Demo': 'static_crm.md'
