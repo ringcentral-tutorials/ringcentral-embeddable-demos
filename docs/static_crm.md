@@ -1,5 +1,3 @@
-# Static CRM Web Widget Demo
-
 The Static CRM Web Widget demo is a simple demo that show cases a generic CRM with the following use cases:
 
 * Click-to-Dial
