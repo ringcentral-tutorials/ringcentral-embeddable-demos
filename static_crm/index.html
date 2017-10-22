@@ -8,16 +8,17 @@
 
     <title>Iron Bank CRM Demo</title>
 
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="./assets/bootstrap-v4.0.0-beta.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <!-- Bootstrap template CSS -->
     <link href="./assets/bootstrap-v4.0.0-beta-example-dashboard.css" rel="stylesheet">
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Iron Bank CRM</a>
+      <a class="navbar-brand" href="#"><i class="fa fa-university" aria-hidden="true"></i> Iron Bank CRM</a>
       <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Home</i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Opportunities</a>
@@ -41,6 +42,7 @@
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
+          <a class="github-button" href="https://github.com/grokify/ringcentral-web-widget-demos" data-icon="octicon-star" data-show-count="true" data-size="large" aria-label="Star grokify/ringcentral-web-widget-demos on GitHub">Star</a>&nbsp;&nbsp;
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
@@ -188,7 +190,7 @@
     <script src="./data/characters.js"></script>
     <script>
         function addUserToContactTable(tableSelector, char) {
-            console.log(char.character.displayName);
+            //console.log(char.character.displayName);
             var numberE164 = char.character.phoneNumbers[0].value;
             var numberNat = phoneUtils.formatNational(numberE164, "us");
             jQuery(tableSelector).find('tbody')
@@ -198,7 +200,7 @@
                     )
                     .append(jQuery('<td><a href="?id='+char.id+'">'+char.character.displayName+'</a>')
                     )
-                    .append('<td><a href="tel:'+numberE164+'">'+numberNat+'</a></td>')
+                    .append('<td><a href="tel:'+numberE164+'">'+numberNat+' <i class="fa fa-phone"></i></a> <a href="sms:'+numberE164+'"><i class="fa fa-comment"></i></a></td>')
                     .append(jQuery('<td>'))
                 );
         }
@@ -244,15 +246,15 @@
                 for (var j=0;j<cases.length;j++) {
                     var c = cases[j];
                     jQuery('#casestable').find('tbody')
-                        .append(jQuery('<tr>')
+                      .append(jQuery('<tr>')
                     .append(jQuery('<td>')
-                        .text(c.subject)
+                      .text(c.subject)
                     )
                     .append(jQuery('<td>')
-                        .text(c.priority)
+                      .text(c.priority)
                     )
                     .append(jQuery('<td>')
-                        .text(c.date)
+                      .text(c.date)
                     )
                 );
                 }
@@ -272,6 +274,8 @@
     <script src="./assets/bootstrap-v4.0.0-beta.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/ie10-viewport-bug-workaround.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script src="./ringcentral.js"></script>
   </body>

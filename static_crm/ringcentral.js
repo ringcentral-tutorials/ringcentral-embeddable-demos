@@ -1,7 +1,7 @@
 // Add the RingCentral Web Widget
 (function() {
   var rcs = document.createElement("script");
-  rcs.src = "https://ringcentral.github.io/ringcentral-web-widget/adapter.js";
+  rcs.src = "https://ringcentral.github.io/ringcentral-web-widget/adapter.js?appKey=NThYK51QQFaTtFNLxgVmdw&appSecret=JhgsGZlMRxaW-1cIl4TXIALvyC0_44QEGPvbFPQ-BRHA&appServer=https://platform.devtest.ringcentral.com&redirectUri=https://ringcentral.github.io/ringcentral-web-widget/redirect.html";
   var rcs0 = document.getElementsByTagName("script")[0];
   rcs0.parentNode.insertBefore(rcs, rcs0);
   if (window.RCAdapter) {
