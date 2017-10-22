@@ -16,6 +16,13 @@ To install this demo, clone the repo and load the file in your browser:
 
 `git clone https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos`
 
+2. Create a RingCentral App
+
+Create an app with the following characteristics:
+
+* 
+* 
+
 2. Add your demo PSTN number
 
 Edit the `data/characters_data.js` file for Jon Snow with your PSTN number in E.164 format.
@@ -35,6 +42,21 @@ These to capabilities are added automatically to the pages since the links are a
 For example:
 
 `<a href="tel:+16505550100">Call</a> <a href="tel:+16505550100">Text</a>`
+
+Here is the JavaScript code that loads the web widget and attaches it to the `tel` and `sms` URI schemes.
+
+```js
+// Add the RingCentral Web Widget
+(function() {
+  var rcs = document.createElement("script");
+  rcs.src = "https://ringcentral.github.io/ringcentral-web-widget/adapter.js?appKey=myAppKey&appServer=https://platform.devtest.ringcentral.com&redirectUri=https://ringcentral.github.io/ringcentral-web-widget/redirect.html";
+  var rcs0 = document.getElementsByTagName("script")[0];
+  rcs0.parentNode.insertBefore(rcs, rcs0);
+  if (window.RCAdapter) {
+    window.RCAdapter.setMinimized(false);
+  }
+})();
+```
 
 ### Inbound Screen-Pop
 
