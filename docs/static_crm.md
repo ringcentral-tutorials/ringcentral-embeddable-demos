@@ -8,6 +8,8 @@ The Static CRM Web Widget demo is a simple demo that show cases a generic CRM wi
 
 This demo is located in the `static_crm` folder.
 
+![](static_crm_demo.png)
+
 ## Installation and Customization
 
 To install this demo, clone the repo and load the file in your browser:
