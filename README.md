@@ -20,7 +20,7 @@ This is a set of demos to get started using the RingCentral Web Widget:
 
 This is a quick demo showing a CRM with Click-to-Dial, Click-to-Text and Inbound Screen-Pop.
 
-![](docs/static_crm_demo.png)
+[![](docs/static_crm_demo.png)](https://ringcentral-tutorials.github.io/ringcentral-web-widget-demos/static_crm/)
 
 ## References
 
