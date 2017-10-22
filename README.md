@@ -22,8 +22,6 @@ This is a quick demo showing a CRM with Click-to-Dial, Click-to-Text and Inbound
 
 [![](docs/static_crm_demo.png)](https://ringcentral-tutorials.github.io/ringcentral-web-widget-demos/static_crm/)
 
-![](docs/static_crm_demo.png)
-
 ## References
 
 * [Salesforce Open CTI Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.api_cti.meta/api_cti/)
