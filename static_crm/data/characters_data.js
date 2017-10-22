@@ -13,9 +13,17 @@ var characters = [
       "nickName": "Ned",
       "phoneNumbers": [
         {
-          "value": "+18175550134"
+          "value": "+12725550179"
+        }
+      ],
+      "emails": [
+        {
+          "value": "eddard-ned-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -31,9 +39,17 @@ var characters = [
       "displayName": "Robert Baratheon",
       "phoneNumbers": [
         {
-          "value": "+17075550168"
+          "value": "+12285550121"
+        }
+      ],
+      "emails": [
+        {
+          "value": "robert-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -49,9 +65,17 @@ var characters = [
       "displayName": "Jaime Lannister",
       "phoneNumbers": [
         {
-          "value": "+12155550195"
+          "value": "+16785550139"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jaime-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -67,9 +91,17 @@ var characters = [
       "displayName": "Catelyn Stark",
       "phoneNumbers": [
         {
-          "value": "+17545550190"
+          "value": "+18655550184"
+        }
+      ],
+      "emails": [
+        {
+          "value": "catelyn-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -85,9 +117,17 @@ var characters = [
       "displayName": "Cersei Lannister",
       "phoneNumbers": [
         {
-          "value": "+19135550120"
+          "value": "+13195550150"
+        }
+      ],
+      "emails": [
+        {
+          "value": "cersei-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -103,9 +143,17 @@ var characters = [
       "displayName": "Daenerys Targaryen",
       "phoneNumbers": [
         {
-          "value": "+16675550106"
+          "value": "+15085550116"
+        }
+      ],
+      "emails": [
+        {
+          "value": "daenerys-targaryen@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Dragonstone"
     }
   },
   {
@@ -121,9 +169,17 @@ var characters = [
       "displayName": "Jorah Mormont",
       "phoneNumbers": [
         {
-          "value": "+18785550123"
+          "value": "+17275550120"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jorah-mormont@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Bear Island"
     }
   },
   {
@@ -140,9 +196,17 @@ var characters = [
       "nickName": "Littlefinger",
       "phoneNumbers": [
         {
-          "value": "+14055550138"
+          "value": "+19175550181"
+        }
+      ],
+      "emails": [
+        {
+          "value": "petyr-littlefinger-baelish@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Baelish Keep"
     }
   },
   {
@@ -158,9 +222,17 @@ var characters = [
       "displayName": "Viserys Targaryen",
       "phoneNumbers": [
         {
-          "value": "+19515550150"
+          "value": "+14135550185"
+        }
+      ],
+      "emails": [
+        {
+          "value": "viserys-targaryen@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Dragonstone"
     }
   },
   {
@@ -176,10 +248,16 @@ var characters = [
       "displayName": "Jon Snow",
       "phoneNumbers": [
         {
-          "value": "+14159970079"
+          "value": "+16075550156"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jon-snow@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -194,9 +272,17 @@ var characters = [
       "displayName": "Sansa Stark",
       "phoneNumbers": [
         {
-          "value": "+13525550171"
+          "value": "+14045550184"
+        }
+      ],
+      "emails": [
+        {
+          "value": "sansa-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -212,9 +298,17 @@ var characters = [
       "displayName": "Arya Stark",
       "phoneNumbers": [
         {
-          "value": "+14025550103"
+          "value": "+12085550178"
+        }
+      ],
+      "emails": [
+        {
+          "value": "arya-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -230,9 +324,17 @@ var characters = [
       "displayName": "Robb Stark",
       "phoneNumbers": [
         {
-          "value": "+15735550131"
+          "value": "+12295550183"
+        }
+      ],
+      "emails": [
+        {
+          "value": "robb-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -248,9 +350,17 @@ var characters = [
       "displayName": "Theon Greyjoy",
       "phoneNumbers": [
         {
-          "value": "+19295550128"
+          "value": "+15625550160"
+        }
+      ],
+      "emails": [
+        {
+          "value": "theon-greyjoy@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Iron Islands"
     }
   },
   {
@@ -266,9 +376,17 @@ var characters = [
       "displayName": "Bran Stark",
       "phoneNumbers": [
         {
-          "value": "+16575550155"
+          "value": "+14065550136"
+        }
+      ],
+      "emails": [
+        {
+          "value": "bran-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -284,9 +402,17 @@ var characters = [
       "displayName": "Joffrey Baratheon",
       "phoneNumbers": [
         {
-          "value": "+13255550162"
+          "value": "+13105550109"
+        }
+      ],
+      "emails": [
+        {
+          "value": "joffrey-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -303,9 +429,17 @@ var characters = [
       "nickName": "The Hound",
       "phoneNumbers": [
         {
-          "value": "+18105550126"
+          "value": "+17045550130"
+        }
+      ],
+      "emails": [
+        {
+          "value": "sandor-the-hound-clegane@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "House Clegane"
     }
   },
   {
@@ -321,9 +455,17 @@ var characters = [
       "displayName": "Tyrion Lannister",
       "phoneNumbers": [
         {
-          "value": "+13125550100"
+          "value": "+18055550136"
+        }
+      ],
+      "emails": [
+        {
+          "value": "tyrion-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -339,10 +481,16 @@ var characters = [
       "displayName": "Khal Drogo",
       "phoneNumbers": [
         {
-          "value": "+16105550176"
+          "value": "+19195550127"
+        }
+      ],
+      "emails": [
+        {
+          "value": "khal-drogo@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -357,9 +505,17 @@ var characters = [
       "displayName": "Tywin Lannister",
       "phoneNumbers": [
         {
-          "value": "+16165550126"
+          "value": "+18705550153"
+        }
+      ],
+      "emails": [
+        {
+          "value": "tywin-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -375,10 +531,16 @@ var characters = [
       "displayName": "Davos Seaworth",
       "phoneNumbers": [
         {
-          "value": "+19175550148"
+          "value": "+14585550172"
+        }
+      ],
+      "emails": [
+        {
+          "value": "davos-seaworth@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -393,9 +555,17 @@ var characters = [
       "displayName": "Samwell Tarly",
       "phoneNumbers": [
         {
-          "value": "+13155550131"
+          "value": "+14355550144"
+        }
+      ],
+      "emails": [
+        {
+          "value": "samwell-tarly@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Horn Hill"
     }
   },
   {
@@ -411,9 +581,17 @@ var characters = [
       "displayName": "Margaery Tyrell",
       "phoneNumbers": [
         {
-          "value": "+19145550188"
+          "value": "+13365550148"
+        }
+      ],
+      "emails": [
+        {
+          "value": "margaery-tyrell@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Highgarden"
     }
   },
   {
@@ -429,9 +607,17 @@ var characters = [
       "displayName": "Stannis Baratheon",
       "phoneNumbers": [
         {
-          "value": "+17755550175"
+          "value": "+12285550101"
+        }
+      ],
+      "emails": [
+        {
+          "value": "stannis-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -446,10 +632,16 @@ var characters = [
       "displayName": "Melisandre",
       "phoneNumbers": [
         {
-          "value": "+19795550167"
+          "value": "+16285550112"
+        }
+      ],
+      "emails": [
+        {
+          "value": "melisandre@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -464,9 +656,17 @@ var characters = [
       "displayName": "Jeor Mormont",
       "phoneNumbers": [
         {
-          "value": "+14015550151"
+          "value": "+12105550102"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jeor-mormont@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Bear Island"
     }
   },
   {
@@ -481,10 +681,16 @@ var characters = [
       "displayName": "Bronn",
       "phoneNumbers": [
         {
-          "value": "+15705550182"
+          "value": "+17605550116"
+        }
+      ],
+      "emails": [
+        {
+          "value": "bronn@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -498,10 +704,16 @@ var characters = [
       "displayName": "Varys",
       "phoneNumbers": [
         {
-          "value": "+13185550144"
+          "value": "+18485550104"
+        }
+      ],
+      "emails": [
+        {
+          "value": "varys@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -515,10 +727,16 @@ var characters = [
       "displayName": "Shae",
       "phoneNumbers": [
         {
-          "value": "+16415550123"
+          "value": "+18545550117"
+        }
+      ],
+      "emails": [
+        {
+          "value": "shae@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -532,10 +750,16 @@ var characters = [
       "displayName": "Ygritte",
       "phoneNumbers": [
         {
-          "value": "+18585550125"
+          "value": "+17655550152"
+        }
+      ],
+      "emails": [
+        {
+          "value": "ygritte@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -550,9 +774,17 @@ var characters = [
       "displayName": "Talisa Maegyr",
       "phoneNumbers": [
         {
-          "value": "+18325550135"
+          "value": "+19415550178"
+        }
+      ],
+      "emails": [
+        {
+          "value": "talisa-maegyr@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Volantis"
     }
   },
   {
@@ -567,10 +799,16 @@ var characters = [
       "displayName": "Gendry",
       "phoneNumbers": [
         {
-          "value": "+17625550184"
+          "value": "+14175550104"
+        }
+      ],
+      "emails": [
+        {
+          "value": "gendry@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -585,9 +823,17 @@ var characters = [
       "displayName": "Tormund Giantsbane",
       "phoneNumbers": [
         {
-          "value": "+16015550185"
+          "value": "+16265550169"
+        }
+      ],
+      "emails": [
+        {
+          "value": "tormund-giantsbane@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Free Folk"
     }
   },
   {
@@ -602,10 +848,16 @@ var characters = [
       "displayName": "Gilly",
       "phoneNumbers": [
         {
-          "value": "+15055550137"
+          "value": "+19715550145"
+        }
+      ],
+      "emails": [
+        {
+          "value": "gilly@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -620,9 +872,17 @@ var characters = [
       "displayName": "Brienne of Tarth",
       "phoneNumbers": [
         {
-          "value": "+18145550133"
+          "value": "+18165550144"
+        }
+      ],
+      "emails": [
+        {
+          "value": "brienne-of-tarth@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Tarth"
     }
   },
   {
@@ -638,9 +898,17 @@ var characters = [
       "displayName": "Ramsay Bolton",
       "phoneNumbers": [
         {
-          "value": "+12015550169"
+          "value": "+16165550170"
+        }
+      ],
+      "emails": [
+        {
+          "value": "ramsay-bolton@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "The Dreadfort"
     }
   },
   {
@@ -656,9 +924,17 @@ var characters = [
       "displayName": "Ellaria Sand",
       "phoneNumbers": [
         {
-          "value": "+13145550122"
+          "value": "+13075550127"
+        }
+      ],
+      "emails": [
+        {
+          "value": "ellaria-sand@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Dorne"
     }
   },
   {
@@ -674,9 +950,17 @@ var characters = [
       "displayName": "Daario Naharis",
       "phoneNumbers": [
         {
-          "value": "+14025550198"
+          "value": "+16205550119"
+        }
+      ],
+      "emails": [
+        {
+          "value": "daario-naharis@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Second Sons"
     }
   },
   {
@@ -691,10 +975,16 @@ var characters = [
       "displayName": "Missandei",
       "phoneNumbers": [
         {
-          "value": "+13515550179"
+          "value": "+18565550144"
+        }
+      ],
+      "emails": [
+        {
+          "value": "missandei@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -709,10 +999,16 @@ var characters = [
       "displayName": "Jaqen H'ghar",
       "phoneNumbers": [
         {
-          "value": "+13315550161"
+          "value": "+15855550169"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jaqen-hghar@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -727,9 +1023,17 @@ var characters = [
       "displayName": "Tommen Baratheon",
       "phoneNumbers": [
         {
-          "value": "+15405550107"
+          "value": "+14175550163"
+        }
+      ],
+      "emails": [
+        {
+          "value": "tommen-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -745,9 +1049,17 @@ var characters = [
       "displayName": "Roose Bolton",
       "phoneNumbers": [
         {
-          "value": "+18455550158"
+          "value": "+17135550148"
+        }
+      ],
+      "emails": [
+        {
+          "value": "roose-bolton@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "The Dreadfort"
     }
   },
   {
@@ -763,10 +1075,16 @@ var characters = [
       "displayName": "The High Sparrow",
       "phoneNumbers": [
         {
-          "value": "+13365550146"
+          "value": "+14145550145"
+        }
+      ],
+      "emails": [
+        {
+          "value": "the-high-sparrow@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -781,10 +1099,16 @@ var characters = [
       "displayName": "Grand Maester Pycelle",
       "phoneNumbers": [
         {
-          "value": "+15805550108"
+          "value": "+19545550198"
+        }
+      ],
+      "emails": [
+        {
+          "value": "grand-maester-pycelle@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -799,10 +1123,16 @@ var characters = [
       "displayName": "Meryn Trant",
       "phoneNumbers": [
         {
-          "value": "+18165550153"
+          "value": "+14015550175"
+        }
+      ],
+      "emails": [
+        {
+          "value": "meryn-trant@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -816,10 +1146,16 @@ var characters = [
       "displayName": "Hodor",
       "phoneNumbers": [
         {
-          "value": "+19305550122"
+          "value": "+12135550108"
+        }
+      ],
+      "emails": [
+        {
+          "value": "hodor@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -833,10 +1169,16 @@ var characters = [
       "displayName": "Grenn",
       "phoneNumbers": [
         {
-          "value": "+15025550135"
+          "value": "+14135550122"
+        }
+      ],
+      "emails": [
+        {
+          "value": "grenn@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -850,10 +1192,16 @@ var characters = [
       "displayName": "Osha",
       "phoneNumbers": [
         {
-          "value": "+19705550187"
+          "value": "+12195550108"
+        }
+      ],
+      "emails": [
+        {
+          "value": "osha@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -868,9 +1216,17 @@ var characters = [
       "displayName": "Rickon Stark",
       "phoneNumbers": [
         {
-          "value": "+19475550169"
+          "value": "+12075550170"
+        }
+      ],
+      "emails": [
+        {
+          "value": "rickon-stark@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -885,10 +1241,16 @@ var characters = [
       "displayName": "Ros",
       "phoneNumbers": [
         {
-          "value": "+16015550110"
+          "value": "+17255550174"
+        }
+      ],
+      "emails": [
+        {
+          "value": "ros@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -903,9 +1265,17 @@ var characters = [
       "displayName": "Gregor Clegane",
       "phoneNumbers": [
         {
-          "value": "+14075550178"
+          "value": "+17145550195"
+        }
+      ],
+      "emails": [
+        {
+          "value": "gregor-clegane@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "House Clegane"
     }
   },
   {
@@ -921,10 +1291,16 @@ var characters = [
       "displayName": "Janos Slynt",
       "phoneNumbers": [
         {
-          "value": "+13215550123"
+          "value": "+17275550169"
+        }
+      ],
+      "emails": [
+        {
+          "value": "janos-slynt@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -939,9 +1315,17 @@ var characters = [
       "displayName": "Lancel Lannister",
       "phoneNumbers": [
         {
-          "value": "+19045550152"
+          "value": "+17345550190"
+        }
+      ],
+      "emails": [
+        {
+          "value": "lancel-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -957,9 +1341,17 @@ var characters = [
       "displayName": "Myrcella Baratheon",
       "phoneNumbers": [
         {
-          "value": "+12695550197"
+          "value": "+13155550102"
+        }
+      ],
+      "emails": [
+        {
+          "value": "myrcella-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -975,9 +1367,17 @@ var characters = [
       "displayName": "Rodrik Cassel",
       "phoneNumbers": [
         {
-          "value": "+13475550128"
+          "value": "+18145550139"
+        }
+      ],
+      "emails": [
+        {
+          "value": "rodrik-cassel@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -993,9 +1393,17 @@ var characters = [
       "displayName": "Maester Luwin",
       "phoneNumbers": [
         {
-          "value": "+16075550194"
+          "value": "+12485550193"
+        }
+      ],
+      "emails": [
+        {
+          "value": "maester-luwin@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Winterfell"
     }
   },
   {
@@ -1010,10 +1418,16 @@ var characters = [
       "displayName": "Irri",
       "phoneNumbers": [
         {
-          "value": "+15205550108"
+          "value": "+12015550100"
+        }
+      ],
+      "emails": [
+        {
+          "value": "irri@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1027,10 +1441,16 @@ var characters = [
       "displayName": "Doreah",
       "phoneNumbers": [
         {
-          "value": "+15055550192"
+          "value": "+15135550187"
+        }
+      ],
+      "emails": [
+        {
+          "value": "doreah@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1045,9 +1465,17 @@ var characters = [
       "displayName": "Kevan Lannister",
       "phoneNumbers": [
         {
-          "value": "+16285550156"
+          "value": "+14095550101"
+        }
+      ],
+      "emails": [
+        {
+          "value": "kevan-lannister@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Casterly Rock"
     }
   },
   {
@@ -1063,9 +1491,17 @@ var characters = [
       "displayName": "Barristan Selmy",
       "phoneNumbers": [
         {
-          "value": "+16625550104"
+          "value": "+15675550159"
+        }
+      ],
+      "emails": [
+        {
+          "value": "barristan-selmy@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -1080,10 +1516,16 @@ var characters = [
       "displayName": "Rast",
       "phoneNumbers": [
         {
-          "value": "+16365550171"
+          "value": "+18125550174"
+        }
+      ],
+      "emails": [
+        {
+          "value": "rast@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1098,9 +1540,17 @@ var characters = [
       "displayName": "Maester Aemon",
       "phoneNumbers": [
         {
-          "value": "+18455550126"
+          "value": "+12025550180"
+        }
+      ],
+      "emails": [
+        {
+          "value": "maester-aemon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Night's Watch"
     }
   },
   {
@@ -1115,10 +1565,16 @@ var characters = [
       "displayName": "Pypar",
       "phoneNumbers": [
         {
-          "value": "+12605550164"
+          "value": "+13195550117"
+        }
+      ],
+      "emails": [
+        {
+          "value": "pypar@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1133,10 +1589,16 @@ var characters = [
       "displayName": "Alliser Thorne",
       "phoneNumbers": [
         {
-          "value": "+13255550144"
+          "value": "+13105550167"
+        }
+      ],
+      "emails": [
+        {
+          "value": "alliser-thorne@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1151,10 +1613,16 @@ var characters = [
       "displayName": "Othell Yarwyck",
       "phoneNumbers": [
         {
-          "value": "+17045550159"
+          "value": "+15715550179"
+        }
+      ],
+      "emails": [
+        {
+          "value": "othell-yarwyck@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1169,9 +1637,17 @@ var characters = [
       "displayName": "Loras Tyrell",
       "phoneNumbers": [
         {
-          "value": "+17275550165"
+          "value": "+14125550114"
+        }
+      ],
+      "emails": [
+        {
+          "value": "loras-tyrell@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Highgarden"
     }
   },
   {
@@ -1187,10 +1663,16 @@ var characters = [
       "displayName": "Hot Pie",
       "phoneNumbers": [
         {
-          "value": "+14085550188"
+          "value": "+16205550137"
+        }
+      ],
+      "emails": [
+        {
+          "value": "hot-pie@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1205,10 +1687,16 @@ var characters = [
       "displayName": "Beric Dondarrion",
       "phoneNumbers": [
         {
-          "value": "+18155550165"
+          "value": "+18605550157"
+        }
+      ],
+      "emails": [
+        {
+          "value": "beric-dondarrion@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1223,10 +1711,16 @@ var characters = [
       "displayName": "Podrick Payne",
       "phoneNumbers": [
         {
-          "value": "+18785550129"
+          "value": "+17855550186"
+        }
+      ],
+      "emails": [
+        {
+          "value": "podrick-payne@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1241,9 +1735,17 @@ var characters = [
       "displayName": "Eddison Tollett",
       "phoneNumbers": [
         {
-          "value": "+17175550185"
+          "value": "+19365550145"
+        }
+      ],
+      "emails": [
+        {
+          "value": "eddison-tollett@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Night's Watch"
     }
   },
   {
@@ -1259,9 +1761,17 @@ var characters = [
       "displayName": "Yara Greyjoy",
       "phoneNumbers": [
         {
-          "value": "+18595550159"
+          "value": "+17705550119"
+        }
+      ],
+      "emails": [
+        {
+          "value": "yara-greyjoy@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Iron Islands"
     }
   },
   {
@@ -1277,10 +1787,16 @@ var characters = [
       "displayName": "Selyse Florent",
       "phoneNumbers": [
         {
-          "value": "+14435550169"
+          "value": "+15055550130"
+        }
+      ],
+      "emails": [
+        {
+          "value": "selyse-florent@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1295,10 +1811,16 @@ var characters = [
       "displayName": "Little Sam",
       "phoneNumbers": [
         {
-          "value": "+19295550142"
+          "value": "+15105550179"
+        }
+      ],
+      "emails": [
+        {
+          "value": "little-sam@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1313,10 +1835,16 @@ var characters = [
       "displayName": "Grey Worm",
       "phoneNumbers": [
         {
-          "value": "+15675550128"
+          "value": "+18505550148"
+        }
+      ],
+      "emails": [
+        {
+          "value": "grey-worm@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1330,10 +1858,16 @@ var characters = [
       "displayName": "Qyburn",
       "phoneNumbers": [
         {
-          "value": "+16285550143"
+          "value": "+19895550116"
+        }
+      ],
+      "emails": [
+        {
+          "value": "qyburn@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1348,9 +1882,17 @@ var characters = [
       "displayName": "Olenna Tyrell",
       "phoneNumbers": [
         {
-          "value": "+15635550173"
+          "value": "+16125550128"
+        }
+      ],
+      "emails": [
+        {
+          "value": "olenna-tyrell@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Highgarden"
     }
   },
   {
@@ -1366,9 +1908,17 @@ var characters = [
       "displayName": "Shireen Baratheon",
       "phoneNumbers": [
         {
-          "value": "+12165550108"
+          "value": "+12625550167"
+        }
+      ],
+      "emails": [
+        {
+          "value": "shireen-baratheon@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Westeros"
     }
   },
   {
@@ -1384,9 +1934,17 @@ var characters = [
       "displayName": "Meera Reed",
       "phoneNumbers": [
         {
-          "value": "+15595550174"
+          "value": "+15415550102"
+        }
+      ],
+      "emails": [
+        {
+          "value": "meera-reed@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Greywater Watch"
     }
   },
   {
@@ -1402,9 +1960,17 @@ var characters = [
       "displayName": "Jojen Reed",
       "phoneNumbers": [
         {
-          "value": "+17125550113"
+          "value": "+16175550186"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jojen-reed@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Greywater Watch"
     }
   },
   {
@@ -1420,9 +1986,17 @@ var characters = [
       "displayName": "Thoros of Myr",
       "phoneNumbers": [
         {
-          "value": "+16365550162"
+          "value": "+16205550100"
+        }
+      ],
+      "emails": [
+        {
+          "value": "thoros-of-myr@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Myr"
     }
   },
   {
@@ -1437,10 +2011,16 @@ var characters = [
       "displayName": "Olly",
       "phoneNumbers": [
         {
-          "value": "+18175550129"
+          "value": "+15205550107"
+        }
+      ],
+      "emails": [
+        {
+          "value": "olly@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1455,9 +2035,17 @@ var characters = [
       "displayName": "Mace Tyrell",
       "phoneNumbers": [
         {
-          "value": "+13215550112"
+          "value": "+13135550182"
+        }
+      ],
+      "emails": [
+        {
+          "value": "mace-tyrell@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "Highgarden"
     }
   },
   {
@@ -1473,10 +2061,16 @@ var characters = [
       "displayName": "The Waif",
       "phoneNumbers": [
         {
-          "value": "+16675550138"
+          "value": "+13475550107"
+        }
+      ],
+      "emails": [
+        {
+          "value": "the-waif@example.com"
         }
       ]
-    }
+    },
+    "organization": {}
   },
   {
     "actor": {
@@ -1491,63 +2085,17 @@ var characters = [
       "displayName": "Bowen Marsh",
       "phoneNumbers": [
         {
-          "value": "+14355550141"
+          "value": "+17815550196"
+        }
+      ],
+      "emails": [
+        {
+          "value": "bowen-marsh@example.com"
         }
       ]
+    },
+    "organization": {
+      "name": "The Neck"
     }
   }
 ];
-
-var allCases = {
-  "10": [
-    {
-      "subject": "Needs rescue north of The Wall",
-      "priority":"High",
-      "date":"10/11/2017 9:17 AM"
-    },
-    {
-      "subject": "Return Valyrian steel sword to Jorah Mormont?",
-      "priority":"Low",
-      "date":"10/11/2017 9:17 AM"
-    }
-  ]
-};
-
-var id2user = {};
-var number2user = {};
-
-for (var i=0;i<characters.length;i++) {
-  var id = i+1;
-  var char = characters[i];
-  char.id = id;
-  id2user[id] = char;
-  var number = char.character.phoneNumbers[0].value;
-  number2user[number] = char;
-}
-
-function number2id(number, number2user) {
-  if (number in number2user) {
-    return number2user[number].id;
-  }
-  return "";
-}
-
-function queryString(qs) {
-  var t=this;
-  t.queryString = qs;
-  t.paramsMap = {};
-  t.parse = function(queryString) {
-    var paramsMap = {};
-    var params=queryString.substring(1).split('&');
-    for(var i=0; i<params.length; i++){
-      var pair=params[i].split('=');
-      var k = decodeURIComponent(pair[0]);
-      var v = decodeURIComponent(pair[1]);
-      paramsMap[k] = v;
-    }
-    t.paramsMap = paramsMap;
-  }
-  t.parse(qs);
-}
-
-var qs = new queryString(location.search);

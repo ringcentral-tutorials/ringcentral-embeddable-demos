@@ -1,5 +1,7 @@
 # RingCentral Web Widget + Salesforce Open CTI Tutorial
 
+[![Docs][docs-readthedocs-svg]][docs-readthedocs-url]
+
 This is a set of demos to get started using the RingCentral Web Widget:
 
 * Embeddable Widget: https://github.com/ringcentral/ringcentral-web-widget
@@ -14,7 +16,16 @@ This is a set of demos to get started using the RingCentral Web Widget:
 | [Salesforce Lightning](salesforce_lightning) | y | n | y | y |
 | [Salesforce Plus](salesforce_lightning_more) | y | n | y | y |
 
+### Static CRM Demo
+
+This is a quick demo showing a CRM with Click-to-Dial, Click-to-Text and Inbound Screen-Pop.
+
+![](docs/static_crm_demo.png)
+
 ## References
 
 * [Salesforce Open CTI Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.api_cti.meta/api_cti/)
 * [CTI In the Cloud: the New World of Cloud-based Telephony](https://www.slideshare.net/Salesforce/cti-in-the-cloud-the-new-world-of-cloud-based-telephony)
+
+ [docs-readthedocs-svg]: https://img.shields.io/badge/docs-readthedocs-blue.svg
+ [docs-readthedocs-url]: http://ringcentral-web-widget-demos.readthedocs.org/

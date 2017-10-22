@@ -1,0 +1,11 @@
+site_name: RingCentral Web Widget Demos
+site_url: https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos
+site_favicon: favicon.ico
+repo_url: https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos.git
+docs_dir: docs
+theme: readthedocs
+extra_css: [extra.css]
+extra_javascript: [fonts.js]
+pages:
+- 'Overview': 'index.md'
+- 'Static CRM': 'static_crm.md'

@@ -52,78 +52,11 @@
     <div style="display:none" id="contactslist"><!-- start alt content -->
     <div class="container-fluid">
       <div class="row">
-        <div style="display:none">
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" style="display:none">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reports</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Analytics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Export</a>
-            </li>
-          </ul>
-
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nav item</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nav item again</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">One more nav</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another nav item</a>
-            </li>
-          </ul>
-
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nav item again</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">One more nav</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another nav item</a>
-            </li>
-          </ul>
-        </nav></div>
 
         <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
           <h1 style="display:none">Contacts</h1>
 
-          <section class="row text-center placeholders" style="display:none">
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <div class="text-muted">Something else</div>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </section>
-
-          <h2>Contacts</h2>
+          <h2><i class="fa fa-users" aria-hidden="true"></i> Contacts</h2>
           <div class="table-responsive">
             <table class="table table-striped" id="contacts">
               <thead>
@@ -187,21 +120,26 @@
 
     <script src="./assets/jquery-3.2.1.slim.min.js"></script>
     <script src="./assets/libphonenumber-v0.9.4/libphonenumber.js"></script>
-    <script src="./data/characters.js"></script>
+    <script src="./data/characters_data.js"></script>
+    <script src="./data/characters_methods.js"></script>
     <script>
-        function addUserToContactTable(tableSelector, char) {
+        function addUserToContactTable(tableSelector, char, linkUser) {
             //console.log(char.character.displayName);
             var numberE164 = char.character.phoneNumbers[0].value;
             var numberNat = phoneUtils.formatNational(numberE164, "us");
+            var user = linkUser ?
+              '<td><a href="?id='+char.id+'">'+char.character.displayName+'</a></td>' : '<td>';
             jQuery(tableSelector).find('tbody')
                 .append(jQuery('<tr>')
                     .append(jQuery('<td>')
                         .text(char.id)
                     )
-                    .append(jQuery('<td><a href="?id='+char.id+'">'+char.character.displayName+'</a>')
+                    .append(jQuery('<td><a href="?id='+char.id+'">'+char.character.displayName+'</a></td>')
                     )
                     .append('<td><a href="tel:'+numberE164+'">'+numberNat+' <i class="fa fa-phone"></i></a> <a href="sms:'+numberE164+'"><i class="fa fa-comment"></i></a></td>')
-                    .append(jQuery('<td>'))
+                    .append(jQuery('<td>')
+                        .text(char.organization.name)
+                    )
                 );
         }
         function deleteRow(tableID) {
@@ -226,7 +164,7 @@
                     singleChar = char;
                 }
             }
-            addUserToContactTable(table, char);
+            addUserToContactTable(table, char, true);
         }
 
         if (!id) {
@@ -240,7 +178,7 @@
               return;
             }
             var dn = contact.character.displayName;
-            jQuery('#singlecontactname').html('<a href="./index.html">Contacts</a> - '+dn);
+            jQuery('#singlecontactname').html('<a href="./index.html"><i class="fa fa-users" aria-hidden="true"></i> Contacts</a> <i class="fa fa-user" aria-hidden="true"></i> '+dn);
             var cases = allCases[contact.id];
             if (cases!=null && cases.length>0) {
                 for (var j=0;j<cases.length;j++) {
@@ -260,7 +198,7 @@
                 }
             }
             deleteRow('singlecontacttable');
-            addUserToContactTable('#singlecontacttable', contact);
+            addUserToContactTable('#singlecontacttable', contact, false);
             jQuery('#contactslist').hide();
             jQuery('#singlecontact').show();
         }
