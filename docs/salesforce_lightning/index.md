@@ -15,6 +15,7 @@ Note: There is a follow-on demo that builds on this and will create additional s
   * [Clone the repo](#clone-the-repo)
   * [Add the Widget to Salesforce](#add-the-widget-to-salesforce)
     * [Create the Salesforce Call Center](#create-the-salesforce-call-center)
+    * [Create the Widget Visualforce Page](#create-the-widget-visualforce-page)
     * [Add the Widget to Your Salesforce App](#add-the-widget-to-your-salesforce-app)
 * Integrations
   * Click-to-Dial
@@ -88,27 +89,62 @@ You can change the settings in the XML file. The following are of note:
 
 ![](salesforce_step-1.6_call-center_find-and-add-users.png)
 
+#### Create the Widget Visualforce Page
+
+
+<apex:page>
+    <style>
+        .hasMotif {
+        margin : 0px;
+        }
+    </style>
+    <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false"/>
+</apex:page>
+
+#### Create the Widget Visualforce Page
+
+8. Open the *Developer Console* by clicking the gear icon in the upper right corner.
+
+![](salesforce_step-1.8_open-developer-console.png)
+
+9. Create a new Visualforce page by clicking **File > New > Visualforce Page**
+
+![](salesforce_step-1.9_new-visualforce-page.png)
+
+10. Replace the content of the page with the following HTML. Save the page by clicking **File > Save**
+
+```html
+<apex:page>
+    <style>
+        .hasMotif {
+        margin : 0px;
+        }
+    </style>
+    <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false"/>
+</apex:page>
+```
+
 #### Add the Widget to Your Salesforce App
 
-7. Go to the App Manager
+11. Go to the App Manager
 
 In the *Setup > Quick Find*, search for and click on **App Manager**
 
 Select the "Lighting" app you wish to add the Webphone too by clicking **Edit**. For example, you can select the "LightningSales" app as shown below, another Lightning app or click **New Lightning App**.
 
-![](salesforce_step-1.7_select-app.png)
+![](salesforce_step-1.11_select-app.png)
 
-8. Add Open CTI Softphone
+12. Add Open CTI Softphone
 
 Under the *Utility Bar*, click **Add** and then search for, and click, **Open CTI Softphone**. 
 
-![](salesforce_step-1.8_sfdc-app_add-the-softphone.png)
+![](salesforce_step-1.12_sfdc-app_add-the-softphone.png)
 
-9. You do not need to change any options. Click **Save**.
+13. You do not need to change any options. Click **Save**.
 
-![](salesforce_step-1.9_sfdc-app_save-the-softphone.png)
+![](salesforce_step-1.13_sfdc-app_save-the-softphone.png)
 
-10. Go to your app and bring up the RingCentral Web Widget
+10. Go to your Salesforce app via the *App Launcher* and bring up the RingCentral Web Widget
 
 
 
