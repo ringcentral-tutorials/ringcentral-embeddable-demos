@@ -306,4 +306,4 @@ The above completes this tutorial on basic Salesforce Lightning configuration us
 
 The next tutorial covers popular use cases where a user may want to extend the functionality of the Web Widget, such as opening additional Screen-Pops to look up the user's info in sites like Google Search and LinkedIn.
 
-Next: [Using the RingCentral Web Widget with Salesforce Lightning Google Search and LinkedIn](../salesforce_lightning_plus)
+Next: [Using the RingCentral Web Widget with Salesforce Lightning Google Search and LinkedIn](../salesforce_lightning_more)
