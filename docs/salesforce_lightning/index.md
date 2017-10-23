@@ -18,9 +18,9 @@ Note: There is a follow-on demo that builds on this and will create additional s
     * [Create the Widget Visualforce Page](#create-the-widget-visualforce-page)
     * [Add the Widget to Your Salesforce App](#add-the-widget-to-your-salesforce-app)
 * Integrations
-  * Click-to-Dial
-  * Inbound Screen-Pop
-  * Autoamtic Call Logging
+  * [Click-to-Dial](#click-to-dial)
+  * [Inbound Screen-Pop](#inbound-screen-pop)
+  * [Autoamtic Call Logging](#automatic-call-logging)
 
 ## Installation
 
@@ -146,12 +146,31 @@ Under the *Utility Bar*, click **Add** and then search for, and click, **Open CT
 
 10. Go to your Salesforce app via the *App Launcher* and bring up the RingCentral Web Widget
 
+### Click-to-Dial
 
+To add click-to-dial to your RingCentral Widget in Salesforce, we want to call the `sforce.opencti.enableClickToDial()` and `sforce.opencti.onClickToDial()` functions. We will register a fuction to the `onClickToDial()` function that uses the browser's `Window.postMessage()` function message to send a message which the Widget is listening for using the `rc-adapter-new-call` message type.
 
-## Notes
+Code for this is shown below. Open your `RCPhone` Visualforce page and paste the code below the `<apex:iframe>` tag.
 
-### Click-to-Dial and Click-to-Text
-
+```html
+<script src="/support/api/40.0/lightning/opencti_min.js"></script>
+<script>
+   function postMessage(data) {
+       document.getElementsByTagName('iframe')[0].contentWindow.postMessage(data, '*');
+   }  
+   sforce.opencti.enableClickToDial();
+   sforce.opencti.onClickToDial({
+       listener: function(result) {
+           postMessage({
+               type: 'rc-adapter-new-call',
+               phoneNumber: result.number,
+               toCall: true,
+           });
+           sforce.opencti.setSoftphonePanelVisibility({ visible: true });
+       }
+   });
+</script>
+```
 
 ### Inbound Screen-Pop
 
@@ -159,7 +178,7 @@ Under the *Utility Bar*, click **Add** and then search for, and click, **Open CT
 
 Create the `RCPhoneHelper` Apex class if you don't already have one and add a `searchContact` method as shown below:
 
-```apex
+```java
 global class RCPhoneHelper {
 
     // Inbound Screen Pop
@@ -211,3 +230,5 @@ function receiveMessage(event) {
 }
 window.addEventListener("message", receiveMessage, false);
 ```
+
+### Automatic Call Logging
