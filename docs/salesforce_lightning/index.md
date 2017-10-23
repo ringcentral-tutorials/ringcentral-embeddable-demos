@@ -8,15 +8,22 @@ This demo is located in the [`salesforce_lightning`](github.com/ringcentral-tuto
 
 Note: There is a follow-on demo that builds on this and will create additional screen-pops for Google Search and LinkedIn Search in the [`salesforce_lightning_plus`](github.com/ringcentral-tutorials/ringcentral-web-widget-demos/tree/master/salesforce_lightning_plus) folder. This consists of just one additional line of JavaScript for each serach.
 
-![](static_crm_demo.png)
+## Contents
+
+* [Installation](#installation)
+  * [Create a RingCentral App](#create-a-ringcentral-app)
+  * [Clone the repo](#clone-the-repo)
+  * Add the Web Widget to Salesforce
+    * Creating the Salesforce Call Center
+    * Adding the Webphone to Your Salesforce App
+* Integrations
+  * Click-to-Dial
+  * Inbound Screen-Pop
+  * Autoamtic Call Logging
 
 ## Installation and Customization
 
 To install this demo, clone the repo and load the file in your browser:
-
-### Clone the repo
-
-`git clone https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos`
 
 ### Create a RingCentral App
 
@@ -27,6 +34,10 @@ Create an app with the following characteristics:
 | Platform Type | Browser-based |
 | Grant Types | Authorization Code or Implicit Grant |
 | Permissions | see [ringcentral/ringcentral-web-widget](https://github.com/ringcentral/ringcentral-web-widget) | 
+
+### Clone the repo
+
+`git clone https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos`
 
 ### Add the Web Widget to Salesforce
 
@@ -55,20 +66,6 @@ You can change the settings in the XML file. The following are of note:
 * The *Display Name* is set to "RingCentral Call Center Adapter Open CTI"
 * The *CTI Adapter URL* is set to `/apex/RCPhone`
 
-5. After you have created the Call Center, click **Manage Call Center Users** and then click **Add More Users**.
-
-![](salesforce_step-5_call-center_manage-call-center-users.png)
-
-6. Use the **Find** button to select the users you wish to use the RingCentral Webphone, select the users and then click **Add to Call Center**
-
-![](salesforce_step-6_call-center_find-and-add-users.png)
-
-
-
-
-
-
-
 ```xml
 <callCenter>
   <section sortOrder="0" name="reqGeneralInfo" label="General Information">
@@ -82,6 +79,20 @@ You can change the settings in the XML file. The following are of note:
   </section>
 </callCenter>
 ```
+
+5. After you have created the Call Center, click **Manage Call Center Users** and then click **Add More Users**.
+
+![](salesforce_step-5_call-center_manage-call-center-users.png)
+
+6. Use the **Find** button to select the users you wish to use the RingCentral Webphone, select the users and then click **Add to Call Center**
+
+![](salesforce_step-6_call-center_find-and-add-users.png)
+
+#### Adding the Webphone to Your Salesforce App
+
+
+
+
 
 
 ## Notes
