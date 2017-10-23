@@ -1,6 +1,6 @@
 Extending the RingCentral Web Widget in Salesforce Lightning.
 
-Here is a step by step tutorial for you to create a simple RingCentral to Salesforce integration. So whenever there is an incoming call, the caller's contact page in SalesForce will be popped up. It would also pop up a google search of some sort providing additional information about the person calling.
+Here is a step-by-step tutorial for you to create a simple RingCentral to Salesforce integration. So whenever there is an incoming call, the caller's contact page in SalesForce will be popped up. It would also pop up a Google or LinkedIn Search to provid additional information about the person calling.
 
 Believe it or not, you can do it in 10 minutes. Let's start!
 
@@ -24,11 +24,9 @@ Create an `callcenter.xml` file on your desktop, and copy paste the following co
 </callCenter>
 ```
 
-
 Login your SalesForce developer account. In the "Quick Find" search box search "call center", In "Call Centers", click the "Import" button. Import the `callcenter.xml` file we created above.
 
 ![image](https://user-images.githubusercontent.com/733544/30905545-b9f8ef0a-a33a-11e7-929f-54f81f9b083d.png)
-
 
 Click "Manage Call Center Users" button, add yourself to the call center.
 
@@ -110,7 +108,10 @@ If the incoming call number exists in the contact list in SalesForce, the contac
 
 ![image](https://user-images.githubusercontent.com/733544/30905909-d1cc3730-a33b-11e7-845e-8d4e929b15d3.png)
 
-We will also google search the contact's name in  a new browser tab. Please allow your browser to show the popup by the way.
+We will also Google search the contact's name in  a new browser tab. Please allow your browser to show the popup by the way.
 
 ![image](https://user-images.githubusercontent.com/733544/30945908-79d63fa4-a3c6-11e7-8eff-7ffa8c8e47e2.png)
 
+To add a LinkedIn People Search, simply add the following:
+
+`window.open('https://www.linkedin.com/search/results/people/?keywords=' + contact.Name);`
