@@ -1,0 +1,1 @@
+Extending the RingCentral Web Widget in Salesforce Lightning.

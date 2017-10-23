@@ -20,8 +20,11 @@ To install this demo, clone the repo and load the file in your browser:
 
 Create an app with the following characteristics:
 
-* 
-* 
+| Property | Setting |
+|----------|---------|
+| Platform Type | Browser-based |
+| Grant Types | Authorization Code or Implicit Grant |
+| Permissions | see [ringcentral/ringcentral-web-widget](https://github.com/ringcentral/ringcentral-web-widget) | 
 
 2. Add your demo PSTN number
 
