@@ -55,6 +55,14 @@ You can change the settings in the XML file. The following are of note:
 * The *Display Name* is set to "RingCentral Call Center Adapter Open CTI"
 * The *CTI Adapter URL* is set to `/apex/RCPhone`
 
+5. After you have created the Call Center, click **Manage Call Center Users** and then click **Add More Users**.
+
+![](salesforce_step-5_call-center_manage-call-center-users.png)
+
+6. Use the **Find** button to select the users you wish to use the RingCentral Webphone, select the users and then click **Add to Call Center**
+
+![](salesforce_step-6_call-center_find-and-add-users.png)
+
 
 
 
