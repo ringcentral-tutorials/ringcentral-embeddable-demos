@@ -9,3 +9,4 @@ extra_javascript: [fonts.js]
 pages:
 - 'Overview': 'index.md'
 - 'Static CRM Web Widget Demo': 'static_crm.md'
+- 'Salesforce Lightning Demo': 'salesforce_lightning/index.md'
