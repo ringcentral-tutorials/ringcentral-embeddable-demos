@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Extending the RingCentral Web Widget in Salesforce Lightning.
 
 Here is a step-by-step tutorial for you to create a simple RingCentral to Salesforce integration. So whenever there is an incoming call, the caller's contact page in SalesForce will be popped up. It would also pop up a Google or LinkedIn Search to provid additional information about the person calling.
@@ -115,3 +116,6 @@ We will also Google search the contact's name in  a new browser tab. Please allo
 To add a LinkedIn People Search, simply add the following:
 
 `window.open('https://www.linkedin.com/search/results/people/?keywords=' + contact.Name);`
+=======
+Extending the RingCentral Web Widget in Salesforce Lightning.
+>>>>>>> upstream/master
