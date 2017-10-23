@@ -4,9 +4,9 @@ The RingCentral Web Widget demo for Salesforce Lightning is a simple demo that s
 * Inbound Screen-Pop
 * Call Logging
 
-This demo is located in the `salesforce_lightning` folder.
+This demo is located in the [`salesforce_lightning`](github.com/ringcentral-tutorials/ringcentral-web-widget-demos/tree/master/salesforce_lightning) folder.
 
-Note: There is a follow-on demo that builds on this and will create additional screen-pops for Google Search and LinkedIn Search in the `salesforce_lightning_plus` folder. This consists of just one additional line of JavaScript for each serach.
+Note: There is a follow-on demo that builds on this and will create additional screen-pops for Google Search and LinkedIn Search in the [`salesforce_lightning_plus`](github.com/ringcentral-tutorials/ringcentral-web-widget-demos/tree/master/salesforce_lightning_plus) folder. This consists of just one additional line of JavaScript for each serach.
 
 ![](static_crm_demo.png)
 
@@ -36,7 +36,30 @@ To add the RingCentral Web Widget, we need to create a Salesforce Call Center wi
 
 In Salesforce Lightning create a Salesforce Call Center using the following steps:
 
-1. 
+1. In Salesforce Lightning click `Setup`
+
+![](salesforce_step-1_setup.png)
+
+2. In the *Quick Find*, type `call centers` and then click **Call Centers**.
+
+3. If you see a "Say Hello to Salesforce Call Center" introduction page, click **Continue**.
+
+4. Then click the **Import** button and select the XML file.
+
+![](salesforce_step-4_call-center_import-xml-1.png)
+
+You can create a file similar to the below or import the `salesforce_demo-1.0.0_config_CallCenterDefinition.xml` file.
+
+You can change the settings in the XML file. The following are of note:
+
+* The *Display Name* is set to "RingCentral Call Center Adapter Open CTI"
+* The *CTI Adapter URL* is set to `/apex/RCPhone`
+
+
+
+
+
+
 
 ```xml
 <callCenter>
