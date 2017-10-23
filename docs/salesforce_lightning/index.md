@@ -13,9 +13,9 @@ Note: There is a follow-on demo that builds on this and will create additional s
 * [Installation](#installation)
   * [Create a RingCentral App](#create-a-ringcentral-app)
   * [Clone the repo](#clone-the-repo)
-  * Add the Web Widget to Salesforce
-    * Creating the Salesforce Call Center
-    * Adding the Webphone to Your Salesforce App
+  * [Add the Widget to Salesforce](#add-the-widget-to-salesforce)
+    * [Create the Salesforce Call Center](#create-the-salesforce-call-center)
+    * [Add the Widget to Your Salesforce App](#adding-the-widget-to-your-salesforce-app)
 * Integrations
   * Click-to-Dial
   * Inbound Screen-Pop
@@ -43,13 +43,13 @@ Create an app with the following characteristics:
 
 To add the RingCentral Web Widget, we need to create a Salesforce Call Center with the Visualforce page and then add users that want to use the Web Widget to the Call Center.
 
-#### Creating the Salesforce Call Center
+#### Create the Salesforce Call Center
 
 In Salesforce Lightning create a Salesforce Call Center using the following steps:
 
 1. In Salesforce Lightning click `Setup`
 
-![](salesforce_step-1_setup.png)
+![](salesforce_step-1.1_setup.png)
 
 2. In the *Quick Find*, type `call centers` and then click **Call Centers**.
 
@@ -57,7 +57,7 @@ In Salesforce Lightning create a Salesforce Call Center using the following step
 
 4. Then click the **Import** button and select the XML file.
 
-![](salesforce_step-4_call-center_import-xml-1.png)
+![](salesforce_step-1.4_call-center_import-xml-1.png)
 
 You can create a file similar to the below or import the `salesforce_demo-1.0.0_config_CallCenterDefinition.xml` file.
 
@@ -82,16 +82,33 @@ You can change the settings in the XML file. The following are of note:
 
 5. After you have created the Call Center, click **Manage Call Center Users** and then click **Add More Users**.
 
-![](salesforce_step-5_call-center_manage-call-center-users.png)
+![](salesforce_step-1.5_call-center_manage-call-center-users.png)
 
 6. Use the **Find** button to select the users you wish to use the RingCentral Webphone, select the users and then click **Add to Call Center**
 
-![](salesforce_step-6_call-center_find-and-add-users.png)
+![](salesforce_step-1.6_call-center_find-and-add-users.png)
 
-#### Adding the Webphone to Your Salesforce App
+#### Add the Webphone to Your Salesforce App
 
+7. Go to the App Manager
 
+In the *Setup > Quick Find*, search for and click on **App Manager**
 
+Select the "Lighting" app you wish to add the Webphone too by clicking **Edit**. For example, you can select the "LightningSales" app as shown below, another Lightning app or click **New Lightning App**.
+
+![](salesforce_step-1.7_select-app.png)
+
+8. Add Open CTI Softphone
+
+Under the *Utility Bar*, click **Add** and then search for, and click, **Open CTI Softphone**. 
+
+![](salesforce_step-1.8_sfdc-app_add-the-softphone.png)
+
+9. You do not need to change any options. Click **Save**.
+
+![](salesforce_step-1.9_sfdc-app_save-the-softphone.png)
+
+10. Go to your app and bring up the RingCentral Web Widget
 
 
 
