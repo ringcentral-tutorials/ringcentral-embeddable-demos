@@ -15,13 +15,13 @@ Note: There is a follow-on demo that builds on this and will create additional s
   * [Clone the repo](#clone-the-repo)
   * [Add the Widget to Salesforce](#add-the-widget-to-salesforce)
     * [Create the Salesforce Call Center](#create-the-salesforce-call-center)
-    * [Add the Widget to Your Salesforce App](#adding-the-widget-to-your-salesforce-app)
+    * [Add the Widget to Your Salesforce App](#add-the-widget-to-your-salesforce-app)
 * Integrations
   * Click-to-Dial
   * Inbound Screen-Pop
   * Autoamtic Call Logging
 
-## Installation and Customization
+## Installation
 
 To install this demo, clone the repo and load the file in your browser:
 
@@ -84,11 +84,11 @@ You can change the settings in the XML file. The following are of note:
 
 ![](salesforce_step-1.5_call-center_manage-call-center-users.png)
 
-6. Use the **Find** button to select the users you wish to use the RingCentral Webphone, select the users and then click **Add to Call Center**
+6. Use the **Find** button to select the users you wish to use the RingCentral Widget, select the users and then click **Add to Call Center**
 
 ![](salesforce_step-1.6_call-center_find-and-add-users.png)
 
-#### Add the Webphone to Your Salesforce App
+#### Add the Widget to Your Salesforce App
 
 7. Go to the App Manager
 
