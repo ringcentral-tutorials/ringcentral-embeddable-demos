@@ -17,10 +17,11 @@ Note: There is a follow-on demo that builds on this and will create additional s
     * [Create the Salesforce Call Center](#create-the-salesforce-call-center)
     * [Create the Widget Visualforce Page](#create-the-widget-visualforce-page)
     * [Add the Widget to Your Salesforce App](#add-the-widget-to-your-salesforce-app)
-* Integrations
+* [Integrations](#integrations)
   * [Click-to-Dial](#click-to-dial)
   * [Inbound Screen-Pop](#inbound-screen-pop)
   * [Autoamtic Call Logging](#automatic-call-logging)
+* [Summary](#summary)
 
 ## Installation
 
@@ -146,6 +147,10 @@ Under the *Utility Bar*, click **Add** and then search for, and click, **Open CT
 
 10. Go to your Salesforce app via the *App Launcher* and bring up the RingCentral Web Widget
 
+## Integrations
+
+The following section covers three primary use cases.
+
 ### Click-to-Dial
 
 To add click-to-dial to your RingCentral Widget in Salesforce, we want to call the `sforce.opencti.enableClickToDial()` and `sforce.opencti.onClickToDial()` functions. We will register a fuction to the `onClickToDial()` function that uses the browser's `Window.postMessage()` function message to send a message which the Widget is listening for using the `rc-adapter-new-call` message type.
@@ -232,3 +237,73 @@ window.addEventListener("message", receiveMessage, false);
 ```
 
 ### Automatic Call Logging
+
+#### Apex Class
+
+To enable automatical call logging, first create an Apex helper method. This method should be added to your `RCPhoneHelper` class added above.
+
+```java
+// Call Logging
+webService static void logACall(string contactId, Integer duration, String fromNumber, String toNumber) {
+    Task t = new Task(
+        ActivityDate = date.today(),
+        CallDurationInSeconds = duration,
+        CallType = 'Inbound',
+        Description = 'From: ' + fromNumber + '\nTo: ' + toNumber + '\nDuration: ' + duration + ' seconds',
+        Status = 'Completed',
+        Subject = 'Call log',
+        TaskSubtype = 'Call',
+        Type = 'Call',
+        WhoId = contactId
+    );
+    insert t;
+}
+```
+
+#### Visualforce Page
+
+Now add the Visualforce page JavaScript that will listen for the `rc-call-end-notify` event, look up the contact and, if found, create a Call Log Task.
+
+The code below can be added to the `receiveMessage()` function added above in the Inbound Screen-Pop section.
+
+```javascript
+else if (event.data.type === 'rc-call-end-notify') {
+    if (event.data.call.startTime !== null) {
+        var fromNumber = event.data.call.from;
+        if (fromNumber[0] === '+') {
+            fromNumber = fromNumber.substring(1);
+        }
+        sforce.opencti.runApex({
+            apexClass: 'RCPhoneHelper',
+            methodName: 'searchContact',
+            methodParams: 'phone=' + fromNumber,
+            callback: function(response) {
+                if (response.success == true) {
+                    var contactId = response.returnValue.runApex.Id;
+                    if (contactId !== null) {
+                        sforce.opencti.runApex({
+                            apexClass: 'RCPhoneHelper',
+                            methodName: 'logACall',
+                            methodParams: 'contactId=' + contactId +
+                                '&duration=' + Math.round((event.data.call.endTime - event.data.call.startTime) / 1000) +
+                                '&fromNumber=' + event.data.call.from +
+                                '&toNumber=' + event.data.call.to,
+                            callback: function(rr) {
+                                console.log(rr);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+}
+```
+
+## Summary
+
+The above completes this tutorial on basic Salesforce Lightning configuration using the RingCentral Web Widget.
+
+The next tutorial covers popular use cases where a user may want to extend the functionality of the Web Widget, such as opening additional Screen-Pops to look up the user's info in sites like Google Search and LinkedIn.
+
+Next: [Using the RingCentral Web Widget with Salesforce Lightning Google Search and LinkedIn](../salesforce_lightning_plus)
