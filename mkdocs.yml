@@ -10,4 +10,4 @@ pages:
 - 'Overview': 'index.md'
 - 'Static CRM Web Widget Demo': 'static_crm.md'
 - 'Salesforce Lightning Demo': 'salesforce_lightning/index.md'
-- 'More Salesforce Lightning': 'salesforce_lightning_plus/index.md'
+- 'More Salesforce Lightning': 'salesforce_lightning_more/index.md'
