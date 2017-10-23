@@ -11,7 +11,7 @@ This is a set of demos to get started using the RingCentral Web Widget:
 
 | Demo | Description | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log | Live Demo |
 |------|-------------|---------------|---------------|------------|----------|-----------|
-| [Static Simple](https://ringcentral.github.io/ringcentral-web-widget/) (external) | Tel and SMS | y | y | n | n | [Live Demo](https://ringcentral.github.io/ringcentral-web-widget/) |
+| [Static Simple](https://ringcentral.github.io/ringcentral-web-widget/) (external) | `tel` and `sms` URI schemes | y | y | n | n | [Live Demo](https://ringcentral.github.io/ringcentral-web-widget/) |
 | [Static CRM](static_crm) | Static CRM example | y | y | y | n | [Live Demo](https://ringcentral-tutorials.github.io/ringcentral-web-widget-demos/static_crm/) |
 | [Salesforce Lightning](salesforce_lightning) | Core use cases | y | n | y | y | |
 | [Salesforce Plus](salesforce_lightning_more) | Additional screen pops for Google/LinkedIn Search | y | n | y | y | |
