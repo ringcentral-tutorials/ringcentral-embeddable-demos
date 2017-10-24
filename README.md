@@ -9,6 +9,8 @@ This is a set of demos to get started using the RingCentral Web Widget:
 
 ## Demos
 
+The demo files are in the [`docs`](docs) folder so they can be automatically published on [ReadTheDocs.io](http://ringcentral-web-widget-demos.readthedocs.io/)
+
 | Demo | Description | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log | Live Demo |
 |------|-------------|---------------|---------------|------------|----------|-----------|
 | [Static Simple](https://ringcentral.github.io/ringcentral-web-widget/) (external) | `tel` and `sms` URI schemes | y | y | n | n | [Live Demo](https://ringcentral.github.io/ringcentral-web-widget/) |
