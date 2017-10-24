@@ -2,6 +2,8 @@
 
 **Embeddable Web Widget Demo Apps**
 
+**[http://ringcentral-web-widget-demos.readthedocs.io](http://ringcentral-web-widget-demos.readthedocs.io)**
+
 This repo provides a few quick demos showing embedding of the RingCentral Web Widget all-in-one, embeddable app. It also links to external demos as well.
 
 The following demos are tracked by this project:
