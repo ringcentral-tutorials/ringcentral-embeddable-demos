@@ -16,5 +16,5 @@ The following demos are tracked by this project:
 
 These demos rely on the following projects:
 
-* **[RingCentral Embeddable Web Widget](https://github.com/ringcentral/ringcentral-web-widget)**
-* **[RingCentral React Component Library](https://github.com/ringcentral/ringcentral-js-widget)**
+* **[RingCentral Embeddable Web Widget](https://github.com/ringcentral/ringcentral-web-widget)** - [https://github.com/ringcentral/ringcentral-web-widget](https://github.com/ringcentral/ringcentral-web-widget)
+* **[RingCentral React Component Library](https://github.com/ringcentral/ringcentral-js-widget)** - [https://github.com/ringcentral/ringcentral-js-widget](https://github.com/ringcentral/ringcentral-js-widget)
