@@ -1,4 +1,4 @@
-![](rc-developers_logo.png)
+[![](rc-developers_logo.png)](https://developer.ringcentral.com)
 
 This repo provides a few quick demos showing embedding of the RingCentral Web Widget all-in-one, embeddable app. It also links to external demos as well.
 
