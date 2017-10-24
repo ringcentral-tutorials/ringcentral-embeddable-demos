@@ -12,9 +12,9 @@ This is a set of demos to get started using the RingCentral Web Widget:
 | Demo | Description | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log | Live Demo |
 |------|-------------|---------------|---------------|------------|----------|-----------|
 | [Static Simple](https://ringcentral.github.io/ringcentral-web-widget/) (external) | `tel` and `sms` URI schemes | y | y | n | n | [Live Demo](https://ringcentral.github.io/ringcentral-web-widget/) |
-| [Static CRM](http://ringcentral-web-widget-demos.readthedocs.io/en/latest/static_crm/) | Static CRM example | y | y | y | n | [Live Demo](https://ringcentral-tutorials.github.io/ringcentral-web-widget-demos/static_crm/) |
-| [Salesforce Lightning](salesforce_lightning) | Core use cases | y | n | y | y | [Video](https://www.youtube.com/watch?v=uXZkYNVaGc0) |
-| [Salesforce Plus](salesforce_lightning_more) | Additional screen pops for Google/LinkedIn Search | y | n | y | y | |
+| [Static CRM](http://ringcentral-web-widget-demos.readthedocs.io/en/latest/static_crm/) | Static CRM example | y | y | y | n | [Live Demo](https://ringcentral-tutorials.github.io/ringcentral-web-widget-demos/static_crm/code) |
+| [Salesforce Lightning](http://ringcentral-web-widget-demos.readthedocs.io/en/latest/salesforce_lightning/) | Core use cases | y | n | y | y | [Video](https://www.youtube.com/watch?v=uXZkYNVaGc0) |
+| [Salesforce Plus](http://ringcentral-web-widget-demos.readthedocs.io/en/latest/salesforce_lightning_more/) | Additional screen pops for Google/LinkedIn Search | y | n | y | y | |
 | [Java desktop app using jxBrowser](https://github.com/tylerlong/jxbrowser-webrtc) (external) | Embedding Chromium in a Java app. | y | n | y | n | [Video](https://www.youtube.com/watch?v=SKpLd20b2OM) |
 
 ### Static CRM Demo

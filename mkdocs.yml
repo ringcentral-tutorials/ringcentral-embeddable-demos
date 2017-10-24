@@ -4,12 +4,12 @@ site_favicon: favicon.ico
 repo_url: https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos.git
 docs_dir: docs
 theme: readthedocs
-extra_css: [extra.css]
-extra_javascript: [fonts.js]
+extra_css: [assets/extra.css]
+extra_javascript: [assets/fonts.js]
 pages:
 - 'Overview': 'index.md'
 - 'Static Simple Demo': 'static_simple.md'
-- 'Static CRM Demo': 'static_crm.md'
+- 'Static CRM Demo': 'static_crm/tutorial/index.md'
 - 'Salesforce Lightning Demo': 'salesforce_lightning/index.md'
 - 'More Salesforce Lightning': 'salesforce_lightning_more/index.md'
 - 'Java Desktop App Demo': 'java_desktop_app/index.md'
