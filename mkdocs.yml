@@ -4,8 +4,8 @@ site_favicon: favicon.ico
 repo_url: https://github.com/ringcentral-tutorials/ringcentral-web-widget-demos.git
 docs_dir: docs
 theme: readthedocs
-extra_css: [extra.css]
-extra_javascript: [fonts.js]
+extra_css: [assets/extra.css]
+extra_javascript: [assets/fonts.js]
 pages:
 - 'Overview': 'index.md'
 - 'Static Simple Demo': 'static_simple.md'
