@@ -1,4 +1,5 @@
 <apex:page>
+    <!-- Add the RingCentral Web Widget -->
     <style>
         .hasMotif {
         margin: 0px;
@@ -6,90 +7,98 @@
     </style>
     <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false" />
     
-    
+    // Click-to-Dial
     <script src="/support/api/40.0/lightning/opencti_min.js"></script>
     <script src="https://grokify.github.io/libphonenumber/dist/libphonenumber.js"></script>
     <script>
-        // Click-to-Dial
         function postMessage(data) {
-        document.getElementsByTagName('iframe')[0].contentWindow.postMessage(data, '*');
-    }
-    sforce.opencti.enableClickToDial();
-    sforce.opencti.onClickToDial({
-        listener: function(result) {
-            postMessage({
-                type: 'rc-adapter-new-call',
-                phoneNumber: result.number,
-                toCall: true,
-            });
-            sforce.opencti.setSoftphonePanelVisibility({
-                visible: true
-            });
+            document.getElementsByTagName('iframe')[0].contentWindow.postMessage(data, '*');
         }
-    });
-    
-    
-    function receiveMessage(event) {
-        if (event.data.type === 'rc-call-ring-notify') { // Inbound Screen Pop
-            sforce.opencti.setSoftphonePanelVisibility({
-                visible: true
-            });
-            var fromNumberE164 = event.data.call.from;
-            var fromNumber = phoneUtils.formatNational(fromNumberE164, "us");
-            if (fromNumber[0] === '+') {
-                fromNumber = fromNumber.substring(1);
+        sforce.opencti.enableClickToDial();
+        sforce.opencti.onClickToDial({
+            listener: function(result) {
+                postMessage({
+                    type: 'rc-adapter-new-call',
+                    phoneNumber: result.number,
+                    toCall: true,
+                });
+                sforce.opencti.setSoftphonePanelVisibility({
+                    visible: true
+                });
             }
-            
-            sforce.opencti.runApex({
-                apexClass: 'RCPhoneHelper',
-                methodName: 'searchContact',
-                methodParams: 'phone=' + fromNumber,
-                callback: function(response) {
-                    if (response.success == true) {
-                        var contact = response.returnValue.runApex;
-                        if(contact !== null) {
-                            sforce.opencti.screenPop({
-                                type: sforce.opencti.SCREENPOP_TYPE.SOBJECT,
-                                params: { recordId: contact.Id }
-                            });
-                            //window.open('https://www.google.com/search?q=' + contact.Name);
-                            //window.open('https://www.linkedin.com/search/results/index/?keywords=' + contact.Name);
-                        }
-                    }
-                }
-            });
-        } else if (event.data.type === 'rc-call-end-notify') { // Call Logging
-            if (event.data.call.startTime !== null) {
-                var fromNumber = event.data.call.from;
+        });
+        
+        function receiveMessage(event) {
+            // Inbound Screen-Pop
+            if (event.data.type === 'rc-call-ring-notify') { // Inbound Screen Pop
+                console.log('RCDEMO == Event Received: rc-call-ring-notify');
+                sforce.opencti.setSoftphonePanelVisibility({
+                    visible: true
+                });
+                var fromNumberE164 = event.data.call.from;
+                var fromNumber = phoneUtils.formatNational(fromNumberE164, "us");
                 if (fromNumber[0] === '+') {
                     fromNumber = fromNumber.substring(1);
                 }
+                
                 sforce.opencti.runApex({
                     apexClass: 'RCPhoneHelper',
                     methodName: 'searchContact',
                     methodParams: 'phone=' + fromNumber,
                     callback: function(response) {
                         if (response.success == true) {
-                            var contactId = response.returnValue.runApex.Id;
-                            if (contactId !== null) {
-                                sforce.opencti.runApex({
-                                    apexClass: 'RCPhoneHelper',
-                                    methodName: 'logACall',
-                                    methodParams: 'contactId=' + contactId +
-                                    '&duration=' + Math.round((event.data.call.endTime - event.data.call.startTime) / 1000) +
-                                    '&fromNumber=' + event.data.call.from +
-                                    '&toNumber=' + event.data.call.to,
-                                    callback: function(rr) {
-                                        console.log(rr);
-                                    }
+                            var contact = response.returnValue.runApex;
+                            if(contact !== null) {
+                                sforce.opencti.screenPop({
+                                    type: sforce.opencti.SCREENPOP_TYPE.SOBJECT,
+                                    params: { recordId: contact.Id }
                                 });
+                                //window.open('https://www.google.com/search?q=' + contact.Name);
+                                //window.open('https://www.linkedin.com/search/results/index/?keywords=' + contact.Name);
                             }
                         }
                     }
                 });
+
+            // Automatic Call Logging
+            } else if (event.data.type === 'rc-call-end-notify') { // Call Logging
+                console.log('RCDEMO == Event Received: rc-call-end-notify');
+                console.log(JSON.stringify(event.data));
+                if (event.data.call.startTime !== null) {
+                    var fromNumberE164 = event.data.call.from;
+                    var fromNumber = phoneUtils.formatNational(fromNumberE164, "us");
+                    if (fromNumber[0] === '+') {
+                        fromNumber = fromNumber.substring(1);
+                    }
+                    sforce.opencti.runApex({
+                        apexClass: 'RCPhoneHelper',
+                        methodName: 'searchContact',
+                        methodParams: 'phone=' + fromNumber,
+                        callback: function(response) {
+                            if (response.success == true) {
+                                var contactId = response.returnValue.runApex.Id;
+                                if (contactId !== null) {
+                                    console.log('RCDEMO == Contact Found: '+ fromNumberE164 + ' ' + fromNumber);
+                                    sforce.opencti.runApex({
+                                        apexClass: 'RCPhoneHelper',
+                                        methodName: 'logACall',
+                                        methodParams: 'contactId=' + contactId +
+                                        '&duration=' + Math.round((event.data.call.endTime - event.data.call.startTime) / 1000) +
+                                        '&fromNumber=' + event.data.call.from +
+                                        '&toNumber=' + event.data.call.to,
+                                        callback: function(rr) {
+                                            console.log(rr);
+                                        }
+                                    });
+                                } else {
+                                    console.log('RCDEMO == Contact Not Found: '+ fromNumberE164 + ' ' + fromNumber);
+                                }
+                            }
+                        }
+                    });
+                }
             }
         }
-    }
-    window.addEventListener("message", receiveMessage, false);
+        window.addEventListener("message", receiveMessage, false);
     </script>
 </apex:page>
