@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Simple RingCentral Web Widget Demo</h1>
+
+    <p>Demo: <a href="https://ringcentral.github.io/ringcentral-web-widget/">https://ringcentral.github.io/ringcentral-web-widget/</a></p>
+
+    <p><a href="tel:+14159970079">Tel: (415) 997-0079</a></p>
+    
+    <p><a href="sms:+14159970079">SMS: (415) 997-0079</a></p>
+
+    <script>
+        (function() {
+          var rcs = document.createElement("script");
+          rcs.src = "https://ringcentral.github.io/ringcentral-web-widget/adapter.js";
+          var rcs0 = document.getElementsByTagName("script")[0];
+          rcs0.parentNode.insertBefore(rcs, rcs0);
+        })();
+    </script>
+  </body>
+</html>
