@@ -12,4 +12,4 @@ pages:
 - 'Static CRM Web Widget Demo': 'static_crm.md'
 - 'Salesforce Lightning Demo': 'salesforce_lightning/index.md'
 - 'More Salesforce Lightning': 'salesforce_lightning_more/index.md'
-- 'Java Desktop App Demo': 'java_desktop_app_jxbrowser.md.md'
+- 'Java Desktop App Demo': 'java_desktop_app_jxbrowser.md'
