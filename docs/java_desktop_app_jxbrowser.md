@@ -1,5 +1,6 @@
 This simple demo provides an easy way to get started with both adding the Web Widget to a Java desktop app using jxBrowser:
 
-https://github.com/tylerlong/jxbrowser-webrtc
+* Repo: [https://github.com/tylerlong/jxbrowser-webrtc](https://github.com/tylerlong/jxbrowser-webrtc)
+* jxBrowser: [https://www.teamdev.com/jxbrowser](https://www.teamdev.com/jxbrowser)
 
 ![](https://raw.githubusercontent.com/tylerlong/jxbrowser-webrtc/master/screenshots/calling.png)
