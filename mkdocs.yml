@@ -8,6 +8,8 @@ extra_css: [extra.css]
 extra_javascript: [fonts.js]
 pages:
 - 'Overview': 'index.md'
+- 'Static Simple Demo': 'static_simple.md'
 - 'Static CRM Web Widget Demo': 'static_crm.md'
 - 'Salesforce Lightning Demo': 'salesforce_lightning/index.md'
-- 'More Salesforce Lightning': 'salesforce_lightning_plus/index.md'
+- 'More Salesforce Lightning': 'salesforce_lightning_more/index.md'
+- 'Java Desktop App Demo': 'java_desktop_app_jxbrowser.md.md'
