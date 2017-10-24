@@ -10,6 +10,6 @@ The following demos are tracked by this project:
 * [Salesforce Lightning Plus](salesforce_lightning_more/index.md): additional inbound screen-pops with Google and LinkedIn Searches
 * [Java Desktop App](java_desktop_app_jxbrowser.md) (external): embedding RingCentral WebRTC in a Java desktop app
 
-| Demo | Description | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log | Live Demo |
-| ---- | ----------- | ------------- | ------------- | ---------- | -------- | --------- |
-| a | b | c | d | e | f | g |
+Demo | Description | Click-to-Dial | Click-to-Text | Screen-Pop | Call Log | Live Demo
+---- | ----------- | ------------- | ------------- | ---------- | -------- | ---------
+a | b | c | d | e | f | g
