@@ -1,3 +1,5 @@
+![](rc-developers_logo.png)
+
 This repo provides a few quick demos showing embedding of the RingCentral Web Widget all-in-one app. It also links to external demos as well.
 
 The following demos are tracked by this project:
