@@ -7,7 +7,7 @@
     </style>
     <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false" />
     
-    // Click-to-Dial
+    <!-- Click-to-Dial -->
     <script src="/support/api/40.0/lightning/opencti_min.js"></script>
     <script src="https://grokify.github.io/libphonenumber/dist/libphonenumber.js"></script>
     <script>
