@@ -101,5 +101,12 @@
             }
         }
         window.addEventListener("message", receiveMessage, false);
+        setInterval(function() {
+        	var phoneFrame = document.getElementById("phoneFrame");
+			phoneFrame.setAttribute("style", "display:none");
+            setTimeout(function () {
+                phoneFrame.setAttribute("style", "display:block");
+            }, 1)
+        }, 1000)
     </script>
 </apex:page>
