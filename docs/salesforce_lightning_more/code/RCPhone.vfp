@@ -5,7 +5,8 @@
         margin: 0px;
         }
     </style>
-    <apex:iframe src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false" />
+    <apex:iframe id="phoneFrame" src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false" />
+    <!--apex:iframe id="phoneFrame" src="https://ringcentral.github.io/ringcentral-web-widget/app.html?stylesUri=https://embbnux.github.io/ringcentral-web-widget-styles/GameofThrones/styles.css"  height="500" width="300" frameborder="false" /-->
     
     <!-- Click-to-Dial -->
     <script src="/support/api/40.0/lightning/opencti_min.js"></script>
