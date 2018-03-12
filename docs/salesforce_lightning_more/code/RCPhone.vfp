@@ -7,7 +7,7 @@
     </style>
     <apex:iframe id="phoneFrame" src="https://ringcentral.github.io/ringcentral-web-widget/app.html" height="500" width="300" frameborder="false" />
     <!--apex:iframe id="phoneFrame" src="https://ringcentral.github.io/ringcentral-web-widget/app.html?stylesUri=https://embbnux.github.io/ringcentral-web-widget-styles/GameofThrones/styles.css"  height="500" width="300" frameborder="false" /-->
-    
+
     <!-- Click-to-Dial -->
     <script src="/support/api/40.0/lightning/opencti_min.js"></script>
     <script src="https://grokify.github.io/libphonenumber/dist/libphonenumber.js"></script>
@@ -56,6 +56,7 @@
                                 });
                                 //window.open('https://www.google.com/search?q=' + contact.Name);
                                 //window.open('https://www.linkedin.com/search/results/index/?keywords=' + contact.Name);
+                                //window.open('https://www.linkedin.com/search/results/people/?keywords=' + contact.Name);
                             }
                         }
                     }
@@ -101,12 +102,5 @@
             }
         }
         window.addEventListener("message", receiveMessage, false);
-        setInterval(function() {
-            var phoneFrame = document.getElementById("phoneFrame");
-            phoneFrame.setAttribute("style", "display:none");
-            setTimeout(function () {
-                phoneFrame.setAttribute("style", "display:block");
-            }, 1)
-        }, 1000)
     </script>
 </apex:page>
