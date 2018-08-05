@@ -5,7 +5,7 @@
 This is a set of demos to get started using the RingCentral Web Widget:
 
 * Embeddable Web Widget: https://github.com/ringcentral/ringcentral-embeddable-voice
-* React Component Library: https://github.com/ringcentral/ringcentral-js-widget
+* React Component Library: https://github.com/ringcentral/ringcentral-js-widgets
 
 ## Demos
 
